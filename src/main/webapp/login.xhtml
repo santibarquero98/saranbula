@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Login - Saranbula</title>
+
+	<link rel="stylesheet" type="text/css" href="resources/css/login.css" />
+</h:head>
+<h:body>
+	<div class="login-page">
+		<div class="form">
+			<h1>Iniciar sesion</h1>
+			<h:form>
+				<p:inputText value="#{loginBean.userDto.username}" type="text"
+					placeholder="username" />
+				<p:inputText value="#{loginBean.userDto.password}" type="password"
+					placeholder="password" />
+				<p:commandButton value="Acceder" action="#{loginBean.doLogin}" />
+				<p class="message">
+					¿No tiene cuenta? <a href="#">Crear una nueva cuenta.</a>
+				</p>
+				<p class="message">
+					¿Has perdido tu contraseña? <a href="#">Recuperar contraseña.</a>
+				</p>
+
+			</h:form>
+		</div>
+	</div>
+</h:body>
+</html>
